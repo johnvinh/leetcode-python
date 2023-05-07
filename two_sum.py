@@ -6,6 +6,6 @@ class Solution:
         complements = {}
 
         for i, number in enumerate(nums):
-            if complements.get(number) is not None:
+            if number in complements:
                 return [i, complements[number]]
             complements[target - number] = i
